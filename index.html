@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barómetro Laboral Chile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <strong>Barómetro Laboral Chile</strong>
+        <a class="link" href="#como-funciona">Cómo funciona</a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="badge">Transparencia laboral para Chile</p>
+          <h1>El barómetro de la calidad laboral del entorno empresarial chileno.</h1>
+          <p class="subtitle">
+            Visibiliza entrevistas abusivas, cultura interna y sueldos fuera de mercado. Tu experiencia puede evitar malas decisiones a otras personas.
+          </p>
+          <div class="actions">
+            <button id="ctaPost" class="btn btn-primary">Quiero publicar mi experiencia</button>
+            <a href="#como-funciona" class="btn btn-secondary">Ver metodología</a>
+          </div>
+          <ul class="proof">
+            <li>✓ Publicación breve (máx. 500 caracteres)</li>
+            <li>✓ Enfoque inicial en empresas de Chile</li>
+            <li>✓ Señales de abuso en procesos de selección</li>
+          </ul>
+        </div>
+        <aside class="panel">
+          <h2>¿Qué medimos?</h2>
+          <p>Entrevistas, trato de reclutadores, dificultad técnica, ambiente y remuneración.</p>
+          <p><strong>Objetivo:</strong> construir un índice confiable por rubro y categoría.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="como-funciona" class="how">
+      <div class="container cards">
+        <article class="card"><h3>1. Publicas</h3><p>Comparte tu experiencia real como trabajador/a o entrevistado/a.</p></article>
+        <article class="card"><h3>2. Estructuramos</h3><p>Normalizamos datos por empresa, rubro y etapa de proceso.</p></article>
+        <article class="card"><h3>3. Comparamos</h3><p>Generamos señales para identificar buenas y malas prácticas.</p></article>
+      </div>
+    </section>
+
+    <section id="formSection" class="form-wrap hidden" aria-hidden="true">
+      <div class="container card form-card">
+        <h2>Publica tu experiencia (máx. 500 caracteres)</h2>
+        <form id="postForm">
+          <label>Empresa<input type="text" name="empresa" required maxlength="120" /></label>
+          <label>Rubro / Categoría<input type="text" name="rubro" required maxlength="80" /></label>
+          <label>Tipo de vínculo
+            <select name="vinculo" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="trabaja">Trabajo actualmente aquí</option>
+              <option value="trabajo">Trabajé aquí</option>
+              <option value="entrevistado">Fui entrevistado/a</option>
+            </select>
+          </label>
+          <div class="grid">
+            <label>Entrevistas<input type="number" name="entrevistas" min="0" max="20" required /></label>
+            <label>Dificultad (1-5)<input type="number" name="dificultad" min="1" max="5" required /></label>
+            <label>Trato reclutador (1-5)<input type="number" name="trato" min="1" max="5" required /></label>
+            <label>Ambiente (1-5)<input type="number" name="ambiente" min="1" max="5" required /></label>
+            <label>Remuneración (1-5)<input type="number" name="remuneracion" min="1" max="5" required /></label>
+          </div>
+          <label>¿Peticiones técnicas abusivas?
+            <select name="abusiva" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="no">No</option>
+              <option value="si">Sí</option>
+            </select>
+          </label>
+          <label>Tu experiencia
+            <textarea name="experiencia" id="experiencia" maxlength="500" rows="4" required></textarea>
+            <small><span id="contador">0</span>/500 caracteres</small>
+          </label>
+          <button class="btn btn-primary" type="submit">Publicar experiencia</button>
+          <p id="estado" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
