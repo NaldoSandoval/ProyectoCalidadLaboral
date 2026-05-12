@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calidad Laboral Chile</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Calidad Laboral Chile</h1>
+      <p>
+        Comparte tu experiencia laboral o de entrevistas y ayuda a construir un mercado laboral más justo y transparente.
+      </p>
+      <a href="#formulario" class="cta">Crear primer posteo</a>
+    </header>
+
+    <main>
+      <section id="formulario" class="card">
+        <h2>Publica tu experiencia (máx. 500 caracteres)</h2>
+        <form id="postForm">
+          <label>
+            Empresa
+            <input type="text" name="empresa" required maxlength="120" placeholder="Ej: Empresa XYZ" />
+          </label>
+
+          <label>
+            Rubro / Categoría
+            <input type="text" name="rubro" required maxlength="80" placeholder="Ej: Tecnología, Salud, Retail" />
+          </label>
+
+          <label>
+            Tipo de vínculo
+            <select name="vinculo" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="trabaja">Trabajo actualmente aquí</option>
+              <option value="trabajo">Trabajé aquí</option>
+              <option value="entrevistado">Fui entrevistado/a</option>
+            </select>
+          </label>
+
+          <div class="grid">
+            <label>
+              Entrevistas (cantidad)
+              <input type="number" name="entrevistas" min="0" max="20" required />
+            </label>
+            <label>
+              Dificultad técnica (1-5)
+              <input type="number" name="dificultad" min="1" max="5" required />
+            </label>
+            <label>
+              Trato de reclutadores (1-5)
+              <input type="number" name="trato" min="1" max="5" required />
+            </label>
+            <label>
+              Ambiente laboral (1-5)
+              <input type="number" name="ambiente" min="1" max="5" required />
+            </label>
+            <label>
+              Remuneración acorde (1-5)
+              <input type="number" name="remuneracion" min="1" max="5" required />
+            </label>
+          </div>
+
+          <label>
+            ¿Las peticiones técnicas fueron abusivas?
+            <select name="abusiva" required>
+              <option value="" disabled selected>Selecciona una opción</option>
+              <option value="no">No</option>
+              <option value="si">Sí</option>
+            </select>
+          </label>
+
+          <label>
+            Tu experiencia
+            <textarea name="experiencia" id="experiencia" maxlength="500" rows="4" required placeholder="Describe tu experiencia de forma breve y útil"></textarea>
+            <small><span id="contador">0</span>/500 caracteres</small>
+          </label>
+
+          <button type="submit">Publicar experiencia</button>
+          <p id="estado" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
