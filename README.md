@@ -1,6 +1,6 @@
 # Proyecto Calidad Laboral (MVP)
 
-Plataforma inicial para Chile con enfoque de landing marquetera (tipo barómetro) que invita primero a la acción y luego muestra el formulario para recolectar experiencias sobre:
+Plataforma inicial para Chile enfocada en recolectar experiencias sobre:
 - Proceso de entrevistas.
 - Trato de reclutadores.
 - Cantidad de rondas.
